@@ -1,0 +1,6 @@
+framework module Pods_delete {
+  umbrella header "Pods-delete-umbrella.h"
+
+  export *
+  module * { export * }
+}

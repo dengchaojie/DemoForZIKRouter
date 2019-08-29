@@ -1,0 +1,41 @@
+PODS:
+  - ZIKRouter (1.1.0):
+    - ZIKRouter/ServiceRouter (= 1.1.0)
+    - ZIKRouter/ViewRouter (= 1.1.0)
+  - ZIKRouter/ServiceRouter (1.1.0)
+  - ZIKRouter/ServiceURLRouter (1.1.0):
+    - ZIKRouter/ServiceRouter
+  - ZIKRouter/URLRouter (1.1.0):
+    - ZIKRouter/ServiceURLRouter
+    - ZIKRouter/ViewURLRouter
+  - ZIKRouter/ViewRouter (1.1.0):
+    - ZIKRouter/ServiceRouter
+  - ZIKRouter/ViewURLRouter (1.1.0):
+    - ZIKRouter/ServiceURLRouter
+    - ZIKRouter/ViewRouter
+  - ZRouter (1.1.0):
+    - ZRouter/ServiceRouter (= 1.1.0)
+    - ZRouter/ViewRouter (= 1.1.0)
+  - ZRouter/ServiceRouter (1.1.0):
+    - ZIKRouter/ServiceRouter (>= 1.1.0)
+  - ZRouter/ViewRouter (1.1.0):
+    - ZIKRouter/ViewRouter (>= 1.1.0)
+    - ZRouter/ServiceRouter
+
+DEPENDENCIES:
+  - ZIKRouter (>= 1.1.0)
+  - ZIKRouter/URLRouter (>= 1.1.0)
+  - ZRouter (>= 1.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ZIKRouter
+    - ZRouter
+
+SPEC CHECKSUMS:
+  ZIKRouter: 4d0be5e5f54ae64ce4e4e131bc099ce6dc1e1f1f
+  ZRouter: e2de31d446ba35c8944b8d2efc1da4191deb3e38
+
+PODFILE CHECKSUM: 470bd9d0e1e691c4779c3c35ecee49d6603345b6
+
+COCOAPODS: 1.6.1
