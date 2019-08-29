@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         // serviceRouter
         let priService = Router.makeDestination(to: RoutableService<PrintServiceProtocol>())
-        priService?.printFunc(log: "lwlwlwllw")
+        priService?.printFunc(log: "serviceRouter")
 
     }
 
