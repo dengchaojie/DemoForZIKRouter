@@ -20,9 +20,6 @@ class ViewController: UIViewController {
         // serviceRouter
         let priService = Router.makeDestination(to: RoutableService<PrintServiceProtocol>())
         priService?.printFunc(log: "lwlwlwllw")
-        
-        // 快速注册，未调通
-//        ZIKAnyViewRouter.register(RoutableView<FiveViewProtocol>(), forMakingView: FiveVC.self)
 
     }
 
@@ -30,6 +27,11 @@ class ViewController: UIViewController {
         // viewRouter
 //        Router.perform(
 //            to: RoutableView<SecondViewProtocol>(),
+//            path: .presentModally(from: self)
+//            )
+        // 快速注册，未调通
+//        Router.perform(
+//            to: RoutableView<FiveViewProtocol>(),
 //            path: .presentModally(from: self)
 //            )
         

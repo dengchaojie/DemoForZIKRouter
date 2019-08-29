@@ -11,16 +11,22 @@ import ZIKRouter
 import ZRouter
 
 
-protocol FiveViewProtocol {
+protocol FiveViewProtocol: class {
     
 }
 
 class FiveVC: UIViewController, FiveViewProtocol {
     
     override func viewDidLoad() {
+        self.view.backgroundColor = UIColor.brown
+        print("FiveVC")
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
 }
 
 extension FiveVC: ZIKRoutableView {

@@ -19,9 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//         ViewControllerRouter.register(RoutableView<ViewControllerInput>(), forMakingView: ViewController.self)
-//        ZIKRouter<AnyObject, ZIKPerformRouteConfiguration, ZIKRemoveRouteConfiguration>.enableDefaultURLRouteRule();
-
+        ZIKRouter<AnyObject, ZIKPerformRouteConfiguration, ZIKRemoveRouteConfiguration>.enableDefaultURLRouteRule()
         return true
     }
 

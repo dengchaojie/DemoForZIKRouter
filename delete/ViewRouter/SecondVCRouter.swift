@@ -23,6 +23,8 @@ class SecondViewConfiguration: ZIKViewMakeableConfiguration<SecondVC>, SecondVie
 class SecondVCRouter: ZIKViewRouter<SecondVC, ZIKViewMakeableConfiguration<SecondVC>> {
     
     override class func registerRoutableDestination() {
+        // 快速注册，未调通
+        ZIKAnyViewRouter.register(RoutableView<FiveViewProtocol>(), forMakingView: FiveVC.self)
         registerView(SecondVC.self)
         register(RoutableView<SecondViewProtocol>())
         register(RoutableViewModule<SecondViewModuleInput>())

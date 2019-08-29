@@ -176,7 +176,6 @@
 		B5695EB423175EFB00C109D6 /* ViewRouter */ = {
 			isa = PBXGroup;
 			children = (
-				B5695EED2317875B00C109D6 /* FiveVC.swift */,
 				B5C2EEE323151D6C006024E1 /* SecondVC.swift */,
 				B5695EA72316726C00C109D6 /* SecondViewProtocol.swift */,
 				B5C2EEED231539C8006024E1 /* SecondVCRouter.swift */,
@@ -185,6 +184,7 @@
 				B5695E8C231667C500C109D6 /* ViewRouter.m */,
 				B5695E912316688300C109D6 /* ThirdViewController.h */,
 				B5695E922316688300C109D6 /* ThirdViewController.m */,
+				B5695EED2317875B00C109D6 /* FiveVC.swift */,
 			);
 			path = ViewRouter;
 			sourceTree = "<group>";
