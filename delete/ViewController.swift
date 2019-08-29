@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 //            to: RoutableView<SecondViewProtocol>(),
 //            path: .presentModally(from: self)
 //            )
-        // 快速注册，未调通
+        // 快速注册
 //        Router.perform(
 //            to: RoutableView<FiveViewProtocol>(),
 //            path: .presentModally(from: self)
@@ -71,15 +71,15 @@ class ViewController: UIViewController {
 //            )
         
         // module
-//        Router.perform(
-//            to: RoutableViewModule<LoginModuleInput>(),
-//            path: .presentModally(from: self),
-//            configuring: { (config, _) in
-//                config.prepareDestination = { destination in
-//                    destination.message = "请登录查看笔记详情"
-//                }
-//            }
-//        )
+        Router.perform(
+            to: RoutableViewModule<LoginModuleInput>(),
+            path: .presentModally(from: self),
+            configuring: { (config, prepareModule) in
+                prepareModule({ module in
+//                    module.message = "my name is dcj"
+                })}
+        )
+        
 
     }
 }

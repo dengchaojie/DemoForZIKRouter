@@ -83,7 +83,8 @@ extension ViewMakeableConfiguration: LoginModuleInput where Destination == Login
             return "my name is dcj"
 
         }
-        
+//        set {
+//        }
     }
     
     

@@ -214,9 +214,9 @@
 		B5695EC123176BF200C109D6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				B5695EE7231778FE00C109D6 /* LoginViewProtocol.swift */,
 				B5695EE8231778FE00C109D6 /* LoginModuleInput.swift */,
 				B5695EE9231778FE00C109D6 /* LoginViewRouter.swift */,
+				B5695EE7231778FE00C109D6 /* LoginViewProtocol.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -238,6 +238,16 @@
 				B5695EDE2317755E00C109D6 /* Info.plist */,
 			);
 			path = MposModule;
+			sourceTree = "<group>";
+		};
+		B5695EEF2317ABAA00C109D6 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B5C2EED1231510D4006024E1 /* Main.storyboard */,
+				B5C2EED4231510D4006024E1 /* Assets.xcassets */,
+				B5C2EED6231510D4006024E1 /* LaunchScreen.storyboard */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		B5C2EEC1231510D4006024E1 = {
@@ -266,16 +276,14 @@
 			isa = PBXGroup;
 			children = (
 				B5C2EECF231510D4006024E1 /* ViewController.swift */,
-				B5695EC123176BF200C109D6 /* Module */,
-				B5695EB62317643200C109D6 /* Apapter */,
-				B5695EB523175F0500C109D6 /* UrlRouter */,
 				B5695EB423175EFB00C109D6 /* ViewRouter */,
 				B5695EB323175EEF00C109D6 /* ServiceRouter */,
+				B5695EB523175F0500C109D6 /* UrlRouter */,
+				B5695EB62317643200C109D6 /* Apapter */,
+				B5695EC123176BF200C109D6 /* Module */,
+				B5695EEF2317ABAA00C109D6 /* Other */,
 				B5C2EECD231510D4006024E1 /* AppDelegate.swift */,
 				B5695EA223166B3C00C109D6 /* Header.h */,
-				B5C2EED1231510D4006024E1 /* Main.storyboard */,
-				B5C2EED4231510D4006024E1 /* Assets.xcassets */,
-				B5C2EED6231510D4006024E1 /* LaunchScreen.storyboard */,
 				B5C2EED9231510D4006024E1 /* Info.plist */,
 			);
 			path = delete;
