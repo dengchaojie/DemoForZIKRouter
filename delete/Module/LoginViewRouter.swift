@@ -60,6 +60,7 @@ class LoginViewRouter: ZIKViewRouter<LoginViewController, ViewRouteConfig> {
     */
 }
 
+//RoutableView
 extension LoginViewController: ZIKRoutableView {
     
 }
@@ -69,10 +70,19 @@ extension RoutableView where Protocol == LoginViewProtocol {
 }
 
 
-extension LoginViewController: LoginViewProtocol {
-    
-}
-
+//extension LoginViewController: LoginViewProtocol {
+//    var notifyString: String? {
+//        get {
+//            <#code#>
+//        }
+//        set {
+//            <#code#>
+//        }
+//    }
+//    
+//    
+//}
+//RoutableViewModule
 extension RoutableViewModule where Protocol == LoginModuleInput {
     init() { self.init(declaredTypeName: "LoginModuleInput") }
 }

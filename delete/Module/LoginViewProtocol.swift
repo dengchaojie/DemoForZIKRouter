@@ -7,6 +7,7 @@
 //
 
 //#error("let LoginViewController conform to this protocol")
-protocol LoginViewProtocol {
-    
+protocol LoginViewProtocol: class {
+    var notifyString: String? { get set }
+
 }

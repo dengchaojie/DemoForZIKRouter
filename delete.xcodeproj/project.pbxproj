@@ -27,10 +27,12 @@
 		B5695EDF2317755E00C109D6 /* MposModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B5695EDD2317755E00C109D6 /* MposModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5695EE22317755E00C109D6 /* MposModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5695EDB2317755D00C109D6 /* MposModule.framework */; };
 		B5695EE32317755E00C109D6 /* MposModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5695EDB2317755D00C109D6 /* MposModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B5695EEA231778FE00C109D6 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5695EE7231778FE00C109D6 /* LoginViewProtocol.swift */; };
 		B5695EEB231778FE00C109D6 /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5695EE8231778FE00C109D6 /* LoginModuleInput.swift */; };
 		B5695EEC231778FE00C109D6 /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5695EE9231778FE00C109D6 /* LoginViewRouter.swift */; };
 		B5695EEE2317875B00C109D6 /* FiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5695EED2317875B00C109D6 /* FiveVC.swift */; };
+		B5695EF12317B68B00C109D6 /* LoginViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5695EF02317B68B00C109D6 /* LoginViewAdapter.swift */; };
+		B5695EF32317B7EA00C109D6 /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5695EE7231778FE00C109D6 /* LoginViewProtocol.swift */; };
+		B5695EF52317B97800C109D6 /* ModuleARequiredLoginViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5695EF42317B97800C109D6 /* ModuleARequiredLoginViewInput.swift */; };
 		B5C2EECE231510D4006024E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2EECD231510D4006024E1 /* AppDelegate.swift */; };
 		B5C2EED0231510D4006024E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2EECF231510D4006024E1 /* ViewController.swift */; };
 		B5C2EED3231510D4006024E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C2EED1231510D4006024E1 /* Main.storyboard */; };
@@ -105,6 +107,8 @@
 		B5695EE8231778FE00C109D6 /* LoginModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleInput.swift; sourceTree = "<group>"; };
 		B5695EE9231778FE00C109D6 /* LoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
 		B5695EED2317875B00C109D6 /* FiveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveVC.swift; sourceTree = "<group>"; };
+		B5695EF02317B68B00C109D6 /* LoginViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewAdapter.swift; sourceTree = "<group>"; };
+		B5695EF42317B97800C109D6 /* ModuleARequiredLoginViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleARequiredLoginViewInput.swift; sourceTree = "<group>"; };
 		B5C2EECA231510D4006024E1 /* delete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C2EECD231510D4006024E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C2EECF231510D4006024E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -214,9 +218,11 @@
 		B5695EC123176BF200C109D6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				B5695EF02317B68B00C109D6 /* LoginViewAdapter.swift */,
 				B5695EE8231778FE00C109D6 /* LoginModuleInput.swift */,
-				B5695EE9231778FE00C109D6 /* LoginViewRouter.swift */,
+				B5695EF42317B97800C109D6 /* ModuleARequiredLoginViewInput.swift */,
 				B5695EE7231778FE00C109D6 /* LoginViewProtocol.swift */,
+				B5695EE9231778FE00C109D6 /* LoginViewRouter.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5695EF32317B7EA00C109D6 /* LoginViewProtocol.swift in Sources */,
 				B5695EC02317659400C109D6 /* SixViewAdapter.swift in Sources */,
 				B5695EA82316726C00C109D6 /* SecondViewProtocol.swift in Sources */,
 				B5C2EED0231510D4006024E1 /* ViewController.swift in Sources */,
@@ -523,11 +530,12 @@
 				B5695EEC231778FE00C109D6 /* LoginViewRouter.swift in Sources */,
 				B5C2EEE423151D6C006024E1 /* SecondVC.swift in Sources */,
 				B5C2EECE231510D4006024E1 /* AppDelegate.swift in Sources */,
-				B5695EEA231778FE00C109D6 /* LoginViewProtocol.swift in Sources */,
 				B5695EA623166FFE00C109D6 /* PrintServiceRouter.swift in Sources */,
+				B5695EF52317B97800C109D6 /* ModuleARequiredLoginViewInput.swift in Sources */,
 				B5695E95231668E500C109D6 /* FourthVC.swift in Sources */,
 				B5695EBA2317649000C109D6 /* SixViewRouter.swift in Sources */,
 				B5695EBE2317656400C109D6 /* SixViewRequiredProtocol.swift in Sources */,
+				B5695EF12317B68B00C109D6 /* LoginViewAdapter.swift in Sources */,
 				B5695E8D231667C500C109D6 /* ViewRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

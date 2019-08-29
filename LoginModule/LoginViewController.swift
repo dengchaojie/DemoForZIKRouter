@@ -10,8 +10,7 @@ import UIKit
 
 
 public class LoginViewController: UIViewController {
-    
-    public var message: String?
+    var notifyString: String?
     
     
     override public func viewDidLoad() {
@@ -19,7 +18,7 @@ public class LoginViewController: UIViewController {
         self.view.backgroundColor = UIColor.blue
         print("LoginViewController")
         
-        print(message ?? "message is nil")
+        print(notifyString ?? "message is nil")
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -70,15 +70,29 @@ class ViewController: UIViewController {
 //                }
 //            )
         
-        // module
+        // module+RoutableViewModule
+//        Router.perform(
+//            to: RoutableViewModule<LoginModuleInput>(),
+//            path: .presentModally(from: self),
+//            configuring: { (config, prepareModule) in
+//                prepareModule({ module in
+////                    module.message = "my name is dcj"
+//                })}
+//        )
+        
+        // module+adapter+RoutableView
         Router.perform(
-            to: RoutableViewModule<LoginModuleInput>(),
+            to: RoutableView<ModuleARequiredLoginViewInput>(),
             path: .presentModally(from: self),
-            configuring: { (config, prepareModule) in
-                prepareModule({ module in
-//                    module.message = "my name is dcj"
-                })}
-        )
+            configuring:
+                { (config, _) in
+                    config.prepareDestination =
+                        { [weak self] destination in
+
+
+                        }
+                }
+            )
         
 
     }
