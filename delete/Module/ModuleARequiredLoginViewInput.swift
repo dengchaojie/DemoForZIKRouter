@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol ModuleARequiredLoginViewInput {
+protocol ModuleARequiredLoginViewInput: class {
     var message: String? { get set }
     
 }

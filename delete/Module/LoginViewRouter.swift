@@ -43,7 +43,7 @@ class LoginViewRouter: ZIKViewRouter<LoginViewController, ViewRouteConfig> {
     }
     
     override func destination(with configuration: ViewRouteConfig) -> LoginViewController? {
-        if let config = configuration as? ViewMakeableConfiguration<LoginViewProtocol, (/*arguments*/) -> LoginViewProtocol?>,
+        if let config = configuration as? ViewMakeableConfiguration<LoginViewProtocol, (String) -> LoginViewProtocol?>,
             let makeDestination = config.makeDestination {
             return makeDestination() as? LoginViewController ?? nil
         }
@@ -70,32 +70,32 @@ extension RoutableView where Protocol == LoginViewProtocol {
 }
 
 
-//extension LoginViewController: LoginViewProtocol {
-//    var notifyString: String? {
-//        get {
-//            <#code#>
-//        }
-//        set {
-//            <#code#>
-//        }
-//    }
-//    
-//    
-//}
+extension LoginViewController: LoginViewProtocol {
+    var notifyString: String? {
+        get {
+            return msgHello
+        }
+        set {
+            msgHello = newValue
+        }
+    }
+    
+    
+}
 //RoutableViewModule
 extension RoutableViewModule where Protocol == LoginModuleInput {
     init() { self.init(declaredTypeName: "LoginModuleInput") }
 }
 
 extension ViewMakeableConfiguration: LoginModuleInput where Destination == LoginViewProtocol, Constructor == (String) -> LoginViewProtocol? {
-    var message: String? {
-        get {
-            return "my name is dcj"
-
-        }
-//        set {
+//    var message: String? {
+//        get {
+//            return msgHello
 //        }
-    }
+//        set {
+//            msgHello = newValue
+//        }
+//    }
     
     
 }

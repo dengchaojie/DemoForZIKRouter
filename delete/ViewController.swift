@@ -71,28 +71,28 @@ class ViewController: UIViewController {
 //            )
         
         // module+RoutableViewModule
-//        Router.perform(
-//            to: RoutableViewModule<LoginModuleInput>(),
-//            path: .presentModally(from: self),
-//            configuring: { (config, prepareModule) in
-//                prepareModule({ module in
-////                    module.message = "my name is dcj"
-//                })}
-//        )
+        Router.perform(
+            to: RoutableViewModule<LoginModuleInput>(),
+            path: .presentModally(from: self),
+            configuring: { (config, prepareModule) in
+                prepareModule({ module in
+                    
+                })}
+        )
         
         // module+adapter+RoutableView
-        Router.perform(
-            to: RoutableView<ModuleARequiredLoginViewInput>(),
-            path: .presentModally(from: self),
-            configuring:
-                { (config, _) in
-                    config.prepareDestination =
-                        { [weak self] destination in
-
-
-                        }
-                }
-            )
+//        Router.perform(
+//            to: RoutableView<LoginViewProtocol>(),
+//            path: .presentModally(from: self),
+//            configuring:
+//                { (config, _) in
+//                    config.prepareDestination =
+//                        { [weak self] destination in
+//                            destination.notifyString = "LoginViewProtocol"//LoginViewProtocol
+////                            destination.message = "hello, my name is dcj"//ModuleARequiredLoginViewInput
+//                        }
+//                }
+//            )
         
 
     }

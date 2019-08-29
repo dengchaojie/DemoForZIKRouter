@@ -8,6 +8,6 @@
 
 //#error("let LoginViewController conform to this protocol")
 protocol LoginViewProtocol: class {
-    var notifyString: String? { get set }
+    var notifyString: String? { get set}
 
 }
