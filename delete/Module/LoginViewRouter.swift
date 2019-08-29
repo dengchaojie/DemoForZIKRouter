@@ -88,14 +88,14 @@ extension RoutableViewModule where Protocol == LoginModuleInput {
 }
 
 extension ViewMakeableConfiguration: LoginModuleInput where Destination == LoginViewProtocol, Constructor == (String) -> LoginViewProtocol? {
-//    var message: String? {
-//        get {
-//            return msgHello
-//        }
-//        set {
-//            msgHello = newValue
-//        }
-//    }
+    var message: String? {
+        get {
+            return self.constructorContainer["message"] as? String
+        }
+        set {
+            self.constructorContainer["message"] = newValue
+        }
+    }
     
     
 }

@@ -75,9 +75,12 @@ class ViewController: UIViewController {
             to: RoutableViewModule<LoginModuleInput>(),
             path: .presentModally(from: self),
             configuring: { (config, prepareModule) in
+                
                 prepareModule({ module in
-                    
-                })}
+                    module.message = "hello, this is LoginModuleInput"
+                })
+                
+        }
         )
         
         // module+adapter+RoutableView

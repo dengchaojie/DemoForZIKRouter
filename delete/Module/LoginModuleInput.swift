@@ -9,7 +9,7 @@
 //#error("replace /*arguments*/ with type of module config parameters")
 protocol LoginModuleInput: class {
     // Transfer parameters and make destination
-//    var message: String? { get set }
+    var message: String? { get set }
     
     var makeDestinationWith: (_ param: String) -> LoginViewProtocol? { get }
 }
