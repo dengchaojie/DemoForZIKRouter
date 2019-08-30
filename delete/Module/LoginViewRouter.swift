@@ -30,6 +30,7 @@ class LoginViewRouter: ZIKViewRouter<LoginViewController, ViewRouteConfig> {
             config.makeDestination = { () in
                 // Instantiate destination. Return nil if configuration is invalid.
                 let destination: LoginViewController? = LoginViewController()
+                destination?.message = arguments
                 return destination
             }
             if let destination = config.makeDestination?() {
@@ -49,6 +50,7 @@ class LoginViewRouter: ZIKViewRouter<LoginViewController, ViewRouteConfig> {
         }
         // Instantiate destination with configuration. Return nil if configuration is invalid.
         let destination: LoginViewController? = LoginViewController()
+        destination?.message = "my"
         return destination
     }
     
@@ -88,14 +90,6 @@ extension RoutableViewModule where Protocol == LoginModuleInput {
 }
 
 extension ViewMakeableConfiguration: LoginModuleInput where Destination == LoginViewProtocol, Constructor == (String) -> LoginViewProtocol? {
-    var message: String? {
-        get {
-            return self.constructorContainer["message"] as? String
-        }
-        set {
-            self.constructorContainer["message"] = newValue
-        }
-    }
     
     
 }
