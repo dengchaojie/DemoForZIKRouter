@@ -17,6 +17,15 @@ class FourthViewRouter: ZIKViewRouter<FourthVC, ViewRouteConfig> {
         registerURLPattern("app://FourthVC")
 
     }
+    // 处理urlRouter中的路径和参数
+    override func processUserInfo(_ userInfo: [AnyHashable : Any] = [:], from url: URL) {
+        print(userInfo)
+        let title = userInfo["name"]
+        let age = userInfo["age"]
+        print(title!)
+        print(age!)
+        print(url)
+    }
     
     override func destination(with configuration: ViewRouteConfig) -> FourthVC? {
         // Instantiate destination with configuration. Return nil if configuration is invalid.
@@ -26,6 +35,18 @@ class FourthViewRouter: ZIKViewRouter<FourthVC, ViewRouteConfig> {
     
     override func prepareDestination(_ destination: FourthVC, configuration: ViewRouteConfig) {
         // Prepare destination
+        
+        // 处理来自 url 的参数
+        let title = configuration.userInfo["name"]
+        let age = configuration.userInfo["age"]
+        print(title ?? "title is nil")
+        print(age ?? "age is nil")
+    }
+    
+    // 事件处理
+    @objc class func applicationDidEnterBackground(_ application: UIApplication)
+    {
+        
     }
     
     /*

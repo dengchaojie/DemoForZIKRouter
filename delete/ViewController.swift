@@ -13,6 +13,7 @@ import LoginModule
 
 
 class ViewController: UIViewController {
+    var routerForSecond: DestinationViewRouter<SecondViewProtocol>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +21,17 @@ class ViewController: UIViewController {
         // serviceRouter
         let priService = Router.makeDestination(to: RoutableService<PrintServiceProtocol>())
         priService?.printFunc(log: "serviceRouter")
-
+        
+        
+        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // viewRouter
-//        Router.perform(
-//            to: RoutableView<SecondViewProtocol>(),
-//            path: .presentModally(from: self)
-//            )
+        routerForSecond = Router.perform(
+            to: RoutableView<SecondViewProtocol>(),
+            path: .presentModally(from: self)
+            )
         // 快速注册
 //        Router.perform(
 //            to: RoutableView<FiveViewProtocol>(),
@@ -43,6 +46,7 @@ class ViewController: UIViewController {
 //                config.prepareDestination = { [weak self] destination in
 //                    destination.name = "zuik"
 //                    destination.age = 20
+//
 //                }
 //            }
 //        )
@@ -53,7 +57,7 @@ class ViewController: UIViewController {
 //            path: .presentModally(from: self))
         
         // urlRouter
-//        FourthViewRouter.performURL("app://FourthVC", path: .presentModally(from: self))
+//        FourthViewRouter.performURL("app://FourthVC?name=dcj&age=20", path: .presentModally(from: self))
         
         // adapter
 //        Router.perform(
@@ -71,17 +75,17 @@ class ViewController: UIViewController {
 //            )
         
         // module+RoutableViewModule
-        Router.perform(
-            to: RoutableViewModule<LoginModuleInput>(),
-            path: .presentModally(from: self),
-            configuring: { (config, prepareModule) in
-
-                prepareModule({ module in
-                    module.makeDestinationWith("dcj")
-                })
-
-        }
-        )
+//        Router.perform(
+//            to: RoutableViewModule<LoginModuleInput>(),
+//            path: .presentModally(from: self),
+//            configuring: { (config, prepareModule) in
+//
+//                prepareModule({ module in
+//                    module.makeDestinationWith("dcj")
+//                })
+//
+//        }
+//        )
         
         // module+adapter+RoutableView
 //        Router.perform(
